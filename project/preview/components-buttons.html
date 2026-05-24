@@ -1,0 +1,31 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+.btn {
+  display: inline-flex; align-items: center; gap: 12px;
+  padding: 18px 32px; font-family: var(--structure);
+  font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase;
+  border-radius: 999px; cursor: pointer; border: 0;
+}
+.primary { background: var(--ink); color: var(--bone); box-shadow: 0 4px 0 rgba(42,42,40,0.18); }
+.primary-hover { background: var(--ink); color: var(--bone); box-shadow: 0 8px 0 rgba(42,42,40,0.22); transform: translateY(-2px); }
+.primary-hover .arrow { color: var(--apricot); }
+.ink-cta { background: var(--bone-warm); color: var(--ink); padding: 12px 22px; font-size: 11px; border: 1px solid var(--ink); }
+.arrow { display: inline-block; }
+.email {
+  font-family: var(--serif); font-style: italic; font-size: 18px; color: var(--ink);
+  border-bottom: 1px solid var(--ink); padding-bottom: 2px;
+}
+</style></head>
+<body><div class="card" style="gap:28px">
+  <div class="row" style="gap:24px; flex-wrap:wrap;">
+    <button class="btn primary">Get in touch <span class="arrow">→</span></button>
+    <button class="btn primary primary-hover">Get in touch <span class="arrow" style="transform:translateX(4px)">→</span></button>
+  </div>
+  <span class="mono-label">Primary (rest) · Primary (hover: lift 2px, deeper shadow, arrow turns apricot)</span>
+  <div class="row" style="gap:24px; flex-wrap:wrap;">
+    <button class="btn ink-cta">Get in touch</button>
+    <a class="email">hello@hazelkitson.com</a>
+  </div>
+  <span class="mono-label">Secondary (bone-warm, ink border) · Email link (serif italic, ink underline)</span>
+</div></body></html>

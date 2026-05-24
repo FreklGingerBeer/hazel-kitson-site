@@ -1,0 +1,173 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8">
+<title>Email signature — Hazel Kitson</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  /* ---- stage chrome (not part of the signature) ---- */
+  body { background: var(--bone); margin: 0; padding: 64px; font-family: var(--body); color: var(--ink); }
+  .stage { max-width: 760px; }
+  .stage > header { margin-bottom: 40px; }
+  .stage > header .eyebrow {
+    font-family: var(--structure);
+    font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--apricot);
+    display: inline-flex; align-items: center; gap: 14px;
+  }
+  .stage > header .eyebrow::before { content: ""; width: 36px; height: 1px; background: currentColor; }
+  .stage > header h1 {
+    font-family: var(--serif); font-weight: 400;
+    font-size: 44px; line-height: 1.04; letter-spacing: -0.015em;
+    margin: 14px 0 8px;
+  }
+  .stage > header h1 em { font-style: italic; color: var(--apricot); }
+  .stage > header p { font-family: var(--serif); font-style: italic; font-size: 18px; line-height: 1.5; color: var(--ink-soft); margin: 0; max-width: 56ch; }
+
+  .variant { margin-bottom: 40px; }
+  .variant-label {
+    font-family: var(--structure);
+    font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--apricot);
+    display: inline-flex; align-items: center; gap: 14px;
+    margin-bottom: 12px;
+  }
+  .variant-label::before { content: ""; width: 36px; height: 1px; background: currentColor; }
+  .variant-label .meta { color: var(--ink-soft); letter-spacing: 0.22em; }
+
+  .sample {
+    background: var(--bone-warm);
+    border: 1px solid var(--ink-faint);
+    padding: 32px 36px;
+  }
+
+  pre {
+    background: var(--bone-warm);
+    border: 1px solid var(--ink-faint);
+    padding: 20px 24px;
+    font-size: 12.5px; line-height: 1.6;
+    overflow: auto;
+    font-family: "Inter", "Helvetica Neue", system-ui, sans-serif;
+    color: var(--ink);
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  .note {
+    font-family: var(--hand);
+    font-weight: 500;
+    font-size: 19px;
+    color: var(--olive);
+    letter-spacing: 0.005em;
+    transform: rotate(-1.5deg);
+    transform-origin: 0 center;
+    display: inline-block;
+    margin: 8px 0 28px;
+  }
+  .note .star { color: var(--apricot); margin-right: 6px; }
+</style>
+</head><body>
+<div class="stage">
+
+  <header>
+    <span class="eyebrow">Materials · 04 of 04</span>
+    <h1>Email <em>signature.</em></h1>
+    <p>Paste below the body of every outgoing email. Three variants — pick the one that matches the moment.</p>
+  </header>
+
+  <!-- ============================================================
+       VARIANT 1 · WORDMARK
+       For new threads and first replies to a founder.
+       Uses the canonical wordmark.svg asset.
+  ============================================================ -->
+  <div class="variant">
+    <span class="variant-label">Full · wordmark <span class="meta">— new threads / first reply</span></span>
+    <span class="note"><span class="star">✳</span>uses the canonical wordmark.svg — paste as an inline image in mail clients that allow it.</span>
+
+    <div class="sample">
+      <!-- ============== FULL SIGNATURE — WORDMARK ============== -->
+      <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; font-family:'Inter','Helvetica Neue',sans-serif;">
+        <tr>
+          <td style="padding-right:28px; border-right:1px solid rgba(42,42,40,0.18); vertical-align:top;">
+            <img src="../assets/wordmark-small.svg" alt="No problem, darling." width="180" height="98" style="display:block;">
+          </td>
+          <td style="padding-left:28px; vertical-align:top;">
+            <div style="font-family:'DM Serif Display','Cormorant Garamond',Georgia,serif; font-weight:400; font-size:24px; line-height:1.1; color:#2A2A28; letter-spacing:-0.005em;">Hazel Kitson</div>
+            <div style="font-family:'Anton','Helvetica Neue',Impact,sans-serif; font-size:10px; letter-spacing:0.28em; text-transform:uppercase; color:#EE9F66; margin-top:8px;">— Food &amp; Beverage NPD Consultancy</div>
+            <div style="height:16px;"></div>
+            <div style="font-family:'Inter','Helvetica Neue',sans-serif; font-size:13px; color:#2A2A28; line-height:1.65;">
+              <a href="mailto:hello@hazelkitson.com" style="color:#EE9F66; text-decoration:none; border-bottom:1px solid #EE9F66;">hello@hazelkitson.com</a><br>
+              <a href="https://hazelkitson.com" style="color:#2A2A28; text-decoration:none;">hazelkitson.com</a> &nbsp;·&nbsp; <a href="https://linkedin.com/in/hazelkitson" style="color:#2A2A28; text-decoration:none;">in/hazelkitson</a><br>
+              <span style="color:rgba(42,42,40,0.62)">Newcastle, AU &nbsp;·&nbsp; working AU · NZ · UK</span>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <!-- ======================================================= -->
+    </div>
+  </div>
+
+  <!-- ============================================================
+       VARIANT 2 · FULL (type-only)
+       Use when the recipient's client blocks images.
+       Permanent Marker for the wordmark — design system --display.
+  ============================================================ -->
+  <div class="variant">
+    <span class="variant-label">Full · type-only <span class="meta">— image-blocked fallback</span></span>
+
+    <div class="sample">
+      <!-- ============== FULL SIGNATURE — TYPE ============== -->
+      <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+        <tr>
+          <td style="padding-right:28px; border-right:1px solid rgba(42,42,40,0.18); vertical-align:top;">
+            <div style="font-family:'Permanent Marker','Bradley Hand',cursive; font-weight:400; font-size:32px; line-height:0.96; color:#2A2A28; letter-spacing:-0.005em; transform:rotate(-3deg); display:inline-block; transform-origin:4% center; text-shadow:0 2px 0 rgba(255,255,255,0.22);">No problem,<br>darling.</div>
+          </td>
+          <td style="padding-left:28px; vertical-align:top;">
+            <div style="font-family:'DM Serif Display','Cormorant Garamond',Georgia,serif; font-weight:400; font-size:24px; line-height:1.1; color:#2A2A28; letter-spacing:-0.005em;">Hazel Kitson</div>
+            <div style="font-family:'Anton','Helvetica Neue',Impact,sans-serif; font-size:10px; letter-spacing:0.28em; text-transform:uppercase; color:#EE9F66; margin-top:8px;">— Food &amp; Beverage NPD Consultancy</div>
+            <div style="height:16px;"></div>
+            <div style="font-family:'Inter','Helvetica Neue',sans-serif; font-size:13px; color:#2A2A28; line-height:1.65;">
+              <a href="mailto:hello@hazelkitson.com" style="color:#EE9F66; text-decoration:none; border-bottom:1px solid #EE9F66;">hello@hazelkitson.com</a><br>
+              <a href="https://hazelkitson.com" style="color:#2A2A28; text-decoration:none;">hazelkitson.com</a> &nbsp;·&nbsp; <a href="https://linkedin.com/in/hazelkitson" style="color:#2A2A28; text-decoration:none;">in/hazelkitson</a><br>
+              <span style="color:rgba(42,42,40,0.62)">Newcastle, AU &nbsp;·&nbsp; working AU · NZ · UK</span>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <!-- ==================================================== -->
+    </div>
+  </div>
+
+  <!-- ============================================================
+       VARIANT 3 · SHORT
+       For ongoing threads — DM Serif first name + apricot email.
+  ============================================================ -->
+  <div class="variant">
+    <span class="variant-label">Short <span class="meta">— ongoing threads</span></span>
+
+    <div class="sample">
+      <!-- ============== SHORT SIGNATURE ============== -->
+      <div style="font-family:'DM Serif Display','Cormorant Garamond',Georgia,serif; font-size:22px; color:#2A2A28; line-height:1.1;">Hazel</div>
+      <div style="font-family:'Anton','Helvetica Neue',Impact,sans-serif; font-size:10px; letter-spacing:0.28em; text-transform:uppercase; color:#EE9F66; margin-top:6px;">— NPD Consultancy · Newcastle</div>
+      <div style="font-family:'Inter','Helvetica Neue',sans-serif; font-size:13px; color:#2A2A28; margin-top:6px; line-height:1.5;">
+        <a href="mailto:hello@hazelkitson.com" style="color:#EE9F66; text-decoration:none; border-bottom:1px solid #EE9F66;">hello@hazelkitson.com</a>
+      </div>
+      <!-- ============================================== -->
+    </div>
+  </div>
+
+  <!-- ============================================================
+       PLAIN-TEXT FALLBACK
+       For Gmail HTML-off, terminal mail clients, phones.
+  ============================================================ -->
+  <div class="variant">
+    <span class="variant-label">Plain text <span class="meta">— HTML-off / phone clients</span></span>
+<pre>Hazel Kitson
+— Food &amp; Beverage NPD Consultancy
+hello@hazelkitson.com  ·  hazelkitson.com  ·  in/hazelkitson
+Newcastle, AU  ·  working AU · NZ · UK
+
+"No problem, darling."</pre>
+  </div>
+
+</div>
+</body></html>

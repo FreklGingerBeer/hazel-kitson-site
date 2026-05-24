@@ -1,0 +1,99 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8">
+<title>Invoice — Hazel Kitson</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  @page { size: A4; margin: 0; }
+  body { margin: 0; background: #c4b9a8; font-family: var(--body); color: var(--ink); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .sheet { width: 210mm; min-height: 297mm; background: var(--bone); margin: 0 auto; padding: 22mm; box-sizing: border-box; display:flex; flex-direction:column; }
+  .top { display:flex; justify-content:space-between; align-items: flex-start; padding-bottom: 16px; border-bottom: 1px solid var(--ink-faint); }
+  .brandmark { font-family: var(--serif); font-size: 22pt; }
+  .tag { font-family: var(--display); font-size: 16pt; color: var(--apricot); transform: rotate(-3deg); display:inline-block; line-height: 1; transform-origin: 0 center; margin-top: 8px; }
+  .topright { text-align: right; font-family: var(--structure); font-size: 9pt; letter-spacing: 0.28em; text-transform: uppercase; color: var(--ink-soft); line-height: 1.7; }
+  .topright .big { font-family: var(--serif); font-style: italic; font-size: 36pt; color: var(--apricot); letter-spacing: 0; text-transform: none; line-height: 0.95; margin-bottom: 4px; display:block; }
+
+  h2 { font-family: var(--serif); font-weight: 400; font-size: 28pt; line-height: 1.04; letter-spacing: -0.015em; margin: 24px 0 16px; }
+  h2 em { font-style: italic; color: var(--apricot); }
+
+  .who { display:grid; grid-template-columns: 1fr 1fr; gap: 24px; padding: 16px 0; border-top: 1px solid var(--ink-faint); border-bottom: 1px solid var(--ink-faint); margin: 8px 0 18px; }
+  .who h4 { font-family: var(--structure); font-size: 9pt; letter-spacing: 0.28em; text-transform: uppercase; color: var(--apricot); margin: 0 0 6px; font-weight: 400; }
+  .who p { margin: 0; font-family: var(--serif); font-size: 12pt; line-height: 1.4; }
+
+  table { width: 100%; border-collapse: collapse; }
+  th, td { padding: 14px 0; text-align: left; font-size: 10.5pt; border-bottom: 1px solid var(--ink-faint); vertical-align: top; }
+  th { font-family: var(--structure); font-size: 9pt; letter-spacing: 0.28em; text-transform: uppercase; color: var(--apricot); font-weight: 400; }
+  td.amt { text-align: right; font-family: var(--serif); font-size: 12pt; white-space: nowrap; }
+  tfoot td { border: 0; padding: 6px 0; }
+  tfoot .total td { border-top: 1.5px solid var(--ink); padding-top: 14px; font-family: var(--serif); font-size: 16pt; }
+  tfoot .total td.amt { color: var(--apricot); }
+
+  .pay { margin-top: 28px; padding: 18px 22px; background: var(--bone-warm); border: 1px solid var(--ink-faint); display:grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .pay h4 { font-family: var(--structure); font-size: 9pt; letter-spacing: 0.28em; text-transform: uppercase; color: var(--apricot); margin: 0 0 6px; font-weight: 400; }
+  .pay p { margin: 0; font-family: var(--body); font-size: 10pt; line-height: 1.55; }
+  .pay .v { font-family: var(--serif); font-size: 12pt; }
+
+  .note { margin-top: auto; padding-top: 18px; border-top: 1px solid var(--ink-faint); font-family: var(--serif); font-style: italic; font-size: 11pt; color: var(--ink-soft); }
+</style>
+</head><body>
+<div class="sheet">
+  <div class="top">
+    <div>
+      <div class="brandmark">Hazel Kitson</div>
+      <div class="tag">No problem, darling.</div>
+      <div style="height:8px"></div>
+      <div style="font-family:var(--body); font-size:10pt; color:var(--ink-soft); line-height:1.5;">Hazel Kitson Consulting<br>ABN 44 804 672 647<br>Newcastle, Australia</div>
+    </div>
+    <div class="topright">
+      <span class="big">Invoice</span>
+      № 0042<br>
+      Issued · 12 Mar 2026<br>
+      Due · 26 Mar 2026
+    </div>
+  </div>
+
+  <h2>For phase <em>02 — Recipe &amp; Makers.</em></h2>
+
+  <div class="who">
+    <div>
+      <h4>Billed to</h4>
+      <p>[Client company]<br>[Address line 1]<br>[Suburb, State, Postcode]<br>[ABN]</p>
+    </div>
+    <div>
+      <h4>Project</h4>
+      <p>[Project codename]<br>Proposal № 0042<br>Phase 02 of 04</p>
+    </div>
+  </div>
+
+  <table>
+    <thead>
+      <tr><th style="width:60%">Description</th><th>Period</th><th style="text-align:right">Amount</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Phase 02 · Recipe &amp; Makers — fixed fee</td><td>Feb – Mar 2026</td><td class="amt">$ 12,000.00</td></tr>
+      <tr><td>Ingredient samples (pass-through, at cost)</td><td>—</td><td class="amt">$ 612.40</td></tr>
+      <tr><td>Travel · Sydney supplier visit (pre-approved)</td><td>14 Feb 2026</td><td class="amt">$ 280.00</td></tr>
+    </tbody>
+    <tfoot>
+      <tr><td colspan="2" style="text-align:right; color:var(--ink-soft); font-family:var(--structure); font-size:9pt; letter-spacing:0.28em; text-transform:uppercase;">Subtotal</td><td class="amt">$ 12,892.40</td></tr>
+      <tr><td colspan="2" style="text-align:right; color:var(--ink-soft); font-family:var(--structure); font-size:9pt; letter-spacing:0.28em; text-transform:uppercase;">GST · 10%</td><td class="amt">$ 1,289.24</td></tr>
+      <tr class="total"><td colspan="2" style="text-align:right;">Total due (AUD)</td><td class="amt">$ 14,181.64</td></tr>
+    </tfoot>
+  </table>
+
+  <div class="pay">
+    <div>
+      <h4>Pay to</h4>
+      <p class="v">Hazel Kitson Consulting</p>
+      <p>BSB · 062 000 &nbsp;·&nbsp; ACC · 1234 5678<br>Commonwealth Bank, Australia</p>
+    </div>
+    <div>
+      <h4>Reference</h4>
+      <p class="v">HK-0042-P02</p>
+      <p>Please use as the payment reference so it lands cleanly.</p>
+    </div>
+  </div>
+
+  <p class="note">— Replies within 48 hours. Thanks for the work.</p>
+</div>
+</body></html>

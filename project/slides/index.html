@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hazel Kitson — Deck</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<script src="../deck-stage.js"></script>
+<style>
+  body { margin:0; background:#000; font-family: var(--body); color: var(--ink); }
+  deck-stage { --slide-w: 1920px; --slide-h: 1080px; }
+  section { width:1920px; height:1080px; position:relative; overflow:hidden; box-sizing:border-box; }
+  deck-stage section { color: var(--ink); }
+
+  /* shared */
+  .eyebrow { font-family: var(--structure); font-size: 20px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--apricot); display:inline-flex; align-items:center; gap:18px; }
+  .eyebrow::before { content:""; width:52px; height:1.5px; background: currentColor; }
+  .meta-row { display:flex; gap:36px; font-family: var(--structure); font-size: 18px; letter-spacing: 0.26em; text-transform: uppercase; color: var(--ink); opacity:0.6; }
+
+  /* TITLE slide */
+  .s-title { background: var(--peach); display:grid; grid-template-rows: auto 1fr auto; padding: 90px 110px; }
+  .s-title .top { display:flex; justify-content:space-between; align-items: flex-start; }
+  .s-title .wm { font-family: var(--display); font-size: 280px; line-height: 0.92; color: var(--ink); transform: rotate(-3deg); transform-origin: 4% center; margin: 0; text-shadow: 0 5px 0 rgba(255,255,255,0.22); }
+  .s-title .lede { font-family: var(--serif); font-style: italic; font-size: 44px; line-height: 1.3; max-width: 22ch; margin: 40px 0 0; }
+  .s-title .bottom { display:flex; justify-content:space-between; align-items: flex-end; padding-top: 32px; border-top: 1px solid rgba(42,42,40,0.25); }
+  .s-title .bottom .aside { font-family: var(--serif); font-style: italic; font-size: 26px; color: var(--ink); opacity: 0.72; }
+  .s-title .bottom .id { font-family: var(--structure); font-size: 18px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--ink); opacity: 0.6; }
+
+  /* SECTION header */
+  .s-section { background: var(--ink); color: var(--bone); display:flex; flex-direction:column; justify-content:center; align-items:flex-start; padding: 0 140px; gap: 48px; }
+  .s-section .eyebrow { color: var(--peach); }
+  .s-section .num { font-family: var(--serif); font-style: italic; font-size: 220px; line-height: 0.9; color: var(--apricot); margin: 0; }
+  .s-section h1 { font-family: var(--serif); font-weight: 400; font-size: 120px; line-height: 1.02; margin: 0; max-width: 18ch; color: var(--bone); }
+  .s-section h1 em { font-style: italic; color: var(--apricot); }
+
+  /* QUOTE */
+  .s-quote { background: var(--bone); display:flex; flex-direction:column; justify-content:center; padding: 0 220px; gap: 56px; }
+  .s-quote .mark { font-family: var(--display); font-size: 220px; color: var(--apricot); transform: rotate(-3deg); display:inline-block; line-height: 0.6; }
+  .s-quote blockquote { font-family: var(--serif); font-weight: 400; font-size: 88px; line-height: 1.12; letter-spacing: -0.015em; margin: 0; max-width: 22ch; color: var(--ink); }
+  .s-quote blockquote em { font-style: italic; color: var(--apricot); }
+  .s-quote .attr { font-family: var(--structure); font-size: 20px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--ink-soft); }
+
+  /* PILLARS */
+  .s-pillars { background: var(--bone); padding: 100px 140px; display:flex; flex-direction:column; gap: 64px; }
+  .s-pillars .head { display:flex; flex-direction:column; gap: 24px; }
+  .s-pillars h2 { font-family: var(--serif); font-weight: 400; font-size: 110px; line-height: 1.02; letter-spacing: -0.015em; margin: 0; max-width: 22ch; }
+  .s-pillars h2 em { font-style: italic; color: var(--apricot); }
+  .pillars-grid { display:grid; grid-template-columns: repeat(4, 1fr); gap: 56px; flex:1; align-items: start; }
+  .pillar { display:flex; flex-direction:column; gap: 16px; padding-top: 28px; border-top: 1px solid var(--ink-faint); }
+  .pillar .bignum { font-family: var(--serif); font-style: italic; font-size: 110px; line-height: 1; color: var(--apricot); margin: 0; }
+  .pillar .tag { font-family: var(--structure); font-size: 18px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--apricot); }
+  .pillar h3 { font-family: var(--serif); font-weight: 400; font-size: 40px; line-height: 1.15; margin: 0; }
+  .pillar p { font-family: var(--body); font-size: 22px; line-height: 1.6; color: var(--ink-soft); margin: 0; }
+
+  /* STATS */
+  .s-stats { background: var(--peach); padding: 130px 140px; display:flex; flex-direction:column; justify-content:center; gap: 80px; }
+  .s-stats .head h2 { font-family: var(--serif); font-weight: 400; font-size: 110px; line-height: 1.02; margin: 24px 0 0; max-width: 22ch; }
+  .s-stats .head h2 em { font-style: italic; }
+  .stats-grid { display:flex; gap: 100px; padding-top: 48px; border-top: 1px solid rgba(42,42,40,0.25); flex-wrap:wrap; }
+  .stat strong { display:block; font-family: var(--serif); font-weight: 400; font-size: 140px; line-height: 0.96; color: var(--ink); letter-spacing: -0.02em; }
+  .stat span { display:block; margin-top: 18px; font-family: var(--structure); font-size: 20px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--ink); opacity: 0.65; }
+
+  /* CONTACT — last slide */
+  .s-contact { background: var(--bone); padding: 0 220px; display:flex; flex-direction:column; justify-content:center; gap: 56px; }
+  .s-contact h2 { font-family: var(--serif); font-weight: 400; font-size: 200px; line-height: 1.02; margin: 0; }
+  .s-contact h2 em { font-style: italic; color: var(--apricot); }
+  .s-contact .email { font-family: var(--serif); font-size: 88px; color: var(--apricot); border-bottom: 2px solid var(--apricot); align-self: flex-start; line-height: 1.1; }
+  .s-contact .row { display:flex; gap: 64px; padding-top: 40px; border-top: 1px solid var(--ink-faint); }
+  .s-contact .row .lbl { font-family: var(--structure); font-size: 18px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--apricot); }
+  .s-contact .row .v { display:block; margin-top: 10px; font-family: var(--serif); font-size: 32px; color: var(--ink); }
+</style>
+</head>
+<body>
+<deck-stage data-screen-label="01 No problem, darling.">
+
+  <!-- 1 — Title -->
+  <section data-screen-label="01 Title" class="s-title">
+    <div class="top">
+      <span class="eyebrow">A Food &amp; Beverage NPD Consultancy</span>
+      <div class="meta-row"><span>Newcastle, AU</span><span>Est. 2026</span></div>
+    </div>
+    <div style="display:flex; flex-direction:column; justify-content:center;">
+      <h1 class="wm">No problem,<br>darling.</h1>
+      <p class="lede">Concept, recipe, packaging, production — the bits between an idea and a real shelf.</p>
+    </div>
+    <div class="bottom">
+      <span class="aside">Drinks, mostly. The bits that don't fit the brief, also welcome.</span>
+      <span class="id">Hazel Kitson · 2026</span>
+    </div>
+  </section>
+
+  <!-- 2 — Section opener -->
+  <section data-screen-label="02 Approach" class="s-section">
+    <span class="eyebrow">Approach</span>
+    <p class="num">01</p>
+    <h1>Four things to <em>get right.</em></h1>
+  </section>
+
+  <!-- 3 — Pillars -->
+  <section data-screen-label="03 Four pillars" class="s-pillars">
+    <div class="head">
+      <span class="eyebrow">Approach</span>
+      <h2>Where beverage projects <em>come unstuck.</em></h2>
+    </div>
+    <div class="pillars-grid">
+      <article class="pillar">
+        <p class="bignum">01</p>
+        <span class="tag">Category</span>
+        <h3>What's actually moving on shelf.</h3>
+        <p>Non-alc, wine, spirits, RTD, beer, functional.</p>
+      </article>
+      <article class="pillar">
+        <p class="bignum">02</p>
+        <span class="tag">Makers</span>
+        <h3>Who can produce it.</h3>
+        <p>Food tech, contract manufacture, packaging, ingredients — matched to scale.</p>
+      </article>
+      <article class="pillar">
+        <p class="bignum">03</p>
+        <span class="tag">Rules</span>
+        <h3>FSANZ, claims, certifications.</h3>
+        <p>The work that quietly holds a launch together.</p>
+      </article>
+      <article class="pillar">
+        <p class="bignum">04</p>
+        <span class="tag">Numbers</span>
+        <h3>Honest unit economics.</h3>
+        <p>COGS, MOQs, landed costs — against the formulation you want to ship.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- 4 — Quote -->
+  <section data-screen-label="04 Quote" class="s-quote">
+    <span class="mark">&ldquo;</span>
+    <blockquote>Founders should stay where they're useful — on the brand, the buyers, the <em>room.</em></blockquote>
+    <span class="attr">— The Hazel Kitson playbook</span>
+  </section>
+
+  <!-- 5 — Stats -->
+  <section data-screen-label="05 Track record" class="s-stats">
+    <div class="head">
+      <span class="eyebrow" style="color: var(--ink); opacity: 0.7;">Track record</span>
+      <h2>A small practice, a wide <em>body of work.</em></h2>
+    </div>
+    <div class="stats-grid">
+      <div class="stat"><strong>10+</strong><span>Years in drinks</span></div>
+      <div class="stat"><strong>300+</strong><span>SKUs touched</span></div>
+      <div class="stat"><strong>200+</strong><span>Venues stocking Frekl</span></div>
+      <div class="stat"><strong>AU · NZ · UK</strong><span>Markets</span></div>
+    </div>
+  </section>
+
+  <!-- 6 — Contact -->
+  <section data-screen-label="06 Drop a line" class="s-contact">
+    <span class="eyebrow">Get in touch</span>
+    <h2>Drop a <em>line.</em></h2>
+    <a class="email">hello@hazelkitson.com</a>
+    <div class="row">
+      <div><span class="lbl">Based</span><span class="v">Newcastle, AU</span></div>
+      <div><span class="lbl">Working with</span><span class="v">AU · NZ · UK</span></div>
+      <div><span class="lbl">Response</span><span class="v">Within 48 hours</span></div>
+    </div>
+  </section>
+
+</deck-stage>
+</body>
+</html>

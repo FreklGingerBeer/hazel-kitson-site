@@ -1,0 +1,77 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  .group { margin-bottom: 22px; }
+  .group:last-child { margin-bottom: 0; }
+  .group-label {
+    font-family: var(--structure); font-size: 10px; letter-spacing: 0.3em;
+    text-transform: uppercase; color: var(--ink-soft);
+    display: inline-flex; align-items: center; gap: 12px;
+    margin-bottom: 12px;
+  }
+  .group-label::before { content: ""; width: 28px; height: 1px; background: currentColor; }
+
+  .swatches { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .sw { display: flex; flex-direction: column; gap: 8px; }
+  .chip { height: 80px; border: 1px solid var(--ink-faint); }
+  .name { font-family: var(--structure); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink); }
+  .hex { font-family: var(--body); font-size: 12px; color: var(--ink-soft); }
+
+  /* in-context strip showing the apricot + olive working together */
+  .ctx-strip {
+    margin-top: 22px;
+    padding: 18px 22px;
+    background: var(--bone);
+    border: 1px solid var(--ink-faint);
+    display: flex; flex-wrap: wrap; gap: 18px; align-items: center;
+  }
+  .ctx-strip .eb { font-family: var(--structure); font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--apricot); display: inline-flex; align-items: center; gap: 12px; }
+  .ctx-strip .eb::before { content: ""; width: 28px; height: 1px; background: currentColor; }
+  .ctx-strip .em { font-family: var(--serif); font-style: italic; font-size: 22px; color: var(--apricot); }
+  .ctx-strip .btn {
+    font-family: var(--structure); font-size: 10px; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--bone);
+    background: var(--apricot);
+    padding: 8px 14px; border-radius: 999px;
+    display: inline-flex; align-items: center; gap: 6px;
+  }
+  .ctx-strip .btn.olive { background: var(--olive); }
+</style></head>
+<body><div class="card">
+
+  <!-- ===================== BRAND ===================== -->
+  <div class="group">
+    <span class="group-label">Brand</span>
+    <div class="swatches">
+      <div class="sw"><div class="chip" style="background:#F2B8A0"></div><span class="name">Peach</span><span class="hex">#F2B8A0</span></div>
+      <div class="sw"><div class="chip" style="background:#F8D2BF"></div><span class="name">Peach soft</span><span class="hex">#F8D2BF</span></div>
+      <div class="sw"><div class="chip" style="background:#EE9F66"></div><span class="name">Apricot</span><span class="hex">#EE9F66</span></div>
+      <div class="sw"><div class="chip" style="background:#CB7F48"></div><span class="name">Apricot dk</span><span class="hex">#CB7F48</span></div>
+    </div>
+  </div>
+
+  <!-- ===================== SUPPORTING ===================== -->
+  <div class="group">
+    <span class="group-label">Supporting + neutrals</span>
+    <div class="swatches">
+      <div class="sw"><div class="chip" style="background:#6B7A3A"></div><span class="name">Olive</span><span class="hex">#6B7A3A</span></div>
+      <div class="sw"><div class="chip" style="background:#C8D1A6"></div><span class="name">Olive soft</span><span class="hex">#C8D1A6</span></div>
+      <div class="sw"><div class="chip" style="background:#FAF1E6"></div><span class="name">Bone</span><span class="hex">#FAF1E6</span></div>
+      <div class="sw"><div class="chip" style="background:#F4E8D6"></div><span class="name">Bone warm</span><span class="hex">#F4E8D6</span></div>
+    </div>
+    <div style="height:14px"></div>
+    <div class="swatches" style="grid-template-columns: repeat(4, 1fr);">
+      <div class="sw"><div class="chip" style="background:#2A2A28"></div><span class="name">Ink</span><span class="hex">#2A2A28</span></div>
+      <div class="sw"></div><div class="sw"></div><div class="sw"></div>
+    </div>
+  </div>
+
+  <!-- in-context preview ---------------------------- -->
+  <div class="ctx-strip">
+    <span class="eb">In context</span>
+    <span class="em">— italic emphasis</span>
+    <span class="btn">Get in touch →</span>
+    <span class="btn olive">Adjacent →</span>
+  </div>
+
+</div></body></html>

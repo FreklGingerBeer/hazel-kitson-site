@@ -1,0 +1,40 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+.brand-row { display:flex; align-items:center; gap:28px; }
+.wordmark {
+  font-family: var(--display);
+  font-size: 92px;
+  line-height: 0.92;
+  color: var(--ink);
+  transform: rotate(-3deg);
+  display: inline-block;
+  transform-origin: 0 center;
+}
+.dot { width:8px; height:8px; background: var(--apricot); border-radius:50%; }
+.bizname {
+  font-family: var(--serif);
+  font-size: 32px;
+  letter-spacing: -0.01em;
+}
+.subtitle {
+  font-family: var(--structure);
+  font-size: 14px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  max-width: 44ch;
+  line-height: 1.7;
+}
+</style></head>
+<body><div class="card" style="justify-content:center; gap:28px;">
+  <div class="brand-row">
+    <span class="wordmark">No problem,<br>darling.</span>
+  </div>
+  <div class="row">
+    <span class="bizname">Hazel Kitson</span>
+    <span class="dot"></span>
+    <span class="mono-label" style="color:var(--apricot)">NPD Consultancy · Newcastle, AU</span>
+  </div>
+  <span class="subtitle">A food &amp; beverage NPD consultancy. Drinks, mostly. The bits that don't fit the brief, also welcome.</span>
+</div></body></html>

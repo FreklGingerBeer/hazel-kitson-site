@@ -1,0 +1,28 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+.demo { display:grid; grid-template-columns: 1fr 1fr; gap:24px; align-items:center; }
+.box { padding: 22px; }
+.eyebrow { font-family: var(--structure); font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--apricot); display:inline-flex; align-items:center; gap:14px; }
+.eyebrow::before { content:""; width:36px; height:1px; background: currentColor; }
+.h { font-family: var(--serif); font-weight: 400; font-size: 32px; line-height: 1.04; letter-spacing: -0.015em; margin: 16px 0 12px; }
+.h em { font-style: italic; color: var(--apricot); }
+.p { font-family: var(--serif); font-style: italic; font-size: 15px; line-height: 1.5; color: var(--ink-soft); max-width: 36ch; margin: 0; }
+.swatch { font-family: var(--structure); font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; padding: 4px 8px; background: var(--ink); color: var(--bone); align-self: flex-start; }
+</style></head>
+<body><div class="card" style="gap: 0">
+  <div class="demo">
+    <div class="box" style="background: var(--bone)">
+      <span class="swatch">bone bg</span>
+      <span class="eyebrow">Approach</span>
+      <h2 class="h">Four things to <em>get right.</em></h2>
+      <p class="p">Most beverage projects come unstuck on the same handful of things.</p>
+    </div>
+    <div class="box" style="background: var(--peach)">
+      <span class="swatch">peach bg</span>
+      <span class="eyebrow" style="color: var(--ink); opacity: 0.7;"><span style="background:var(--ink) !important"></span>About</span>
+      <h2 class="h">The studio behind the <em>work.</em></h2>
+      <p class="p" style="opacity:0.78">A small practice. Newcastle, working across AU, NZ &amp; UK.</p>
+    </div>
+  </div>
+</div></body></html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8">
+<title>Brief — Hazel Kitson</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  @page { size: A4; margin: 0; }
+  body { margin: 0; background: #c4b9a8; font-family: var(--body); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .sheet { width: 210mm; min-height: 297mm; background: var(--bone); margin: 0 auto; padding: 22mm; box-sizing: border-box; display:flex; flex-direction:column; gap: 18px; }
+  .top { display:flex; justify-content:space-between; align-items: flex-start; padding-bottom: 14px; border-bottom: 1px solid var(--ink-faint); }
+  .brandmark { font-family: var(--serif); font-size: 18pt; }
+  .topright { font-family: var(--structure); font-size: 9pt; letter-spacing: 0.28em; text-transform: uppercase; color: var(--ink-soft); text-align: right; line-height: 1.7; }
+  .eyebrow { font-family: var(--structure); font-size: 10pt; letter-spacing: 0.28em; text-transform: uppercase; color: var(--apricot); display:inline-flex; align-items:center; gap:12px; }
+  .eyebrow::before { content:""; width:32px; height:1px; background: currentColor; }
+  h1 { font-family: var(--serif); font-weight: 400; font-size: 38pt; line-height: 1.04; letter-spacing: -0.015em; margin: 6px 0 6px; max-width: 16ch; }
+  h1 em { font-style: italic; color: var(--apricot); }
+  .lede { font-family: var(--serif); font-style: italic; font-size: 13pt; max-width: 48ch; }
+
+  .grid { display:grid; grid-template-columns: 1fr 1fr; gap: 18px 32px; padding: 14px 0; border-top: 1px solid var(--ink-faint); border-bottom: 1px solid var(--ink-faint); }
+  .field { display:flex; flex-direction:column; gap: 4px; }
+  .field .k { font-family: var(--structure); font-size: 9pt; letter-spacing: 0.28em; text-transform: uppercase; color: var(--apricot); }
+  .field .v { font-family: var(--serif); font-size: 12pt; color: var(--ink); line-height: 1.4; min-height: 22pt; border-bottom: 1px dotted var(--ink-faint); padding-bottom: 4px; }
+
+  .blocks { display:grid; grid-template-columns: 1fr 1fr; gap: 14px 24px; }
+  .block { padding-top: 12px; border-top: 1px solid var(--ink-faint); }
+  .block h3 { font-family: var(--serif); font-weight: 400; font-size: 14pt; margin: 0 0 6px; }
+  .block p { font-family: var(--body); font-size: 10pt; color: var(--ink-soft); line-height: 1.5; margin: 0; min-height: 60pt; }
+
+  .foot { margin-top: auto; display:flex; justify-content:space-between; padding-top: 12px; border-top: 1px solid var(--ink-faint); font-family: var(--structure); font-size: 8pt; letter-spacing: 0.28em; text-transform: uppercase; color: var(--ink-soft); }
+  .foot .tag { font-family: var(--display); font-size: 13pt; color: var(--apricot); transform: rotate(-3deg); display:inline-block; letter-spacing: 0; text-transform: none; transform-origin: 0 center; }
+</style>
+</head><body>
+<div class="sheet">
+  <div class="top">
+    <span class="brandmark">Hazel Kitson</span>
+    <div class="topright">Project brief<br>For: [Founder name]<br>Issued: [Date]</div>
+  </div>
+
+  <span class="eyebrow">Project brief</span>
+  <h1>Tell me what you're <em>shipping.</em></h1>
+  <p class="lede">A paragraph per box is plenty. Doesn't need to be polished — first conversations work better when the gaps are visible.</p>
+
+  <div class="grid">
+    <div class="field"><span class="k">Working name</span><span class="v">&nbsp;</span></div>
+    <div class="field"><span class="k">Format</span><span class="v">RTD · powder · gummy · other</span></div>
+    <div class="field"><span class="k">Where it goes</span><span class="v">On-prem · retail · DTC · export</span></div>
+    <div class="field"><span class="k">Target launch</span><span class="v">&nbsp;</span></div>
+    <div class="field"><span class="k">Markets</span><span class="v">AU · NZ · UK · other</span></div>
+    <div class="field"><span class="k">Stage right now</span><span class="v">Idea · concept · sample · ready</span></div>
+  </div>
+
+  <div class="blocks">
+    <div class="block">
+      <h3>The product, in one paragraph.</h3>
+      <p>What it is, who it's for, why it exists. The kitchen-table version, not the deck version.</p>
+    </div>
+    <div class="block">
+      <h3>What's already done.</h3>
+      <p>Recipes attempted, manufacturers spoken to, packaging mocked. Anything you can already point at.</p>
+    </div>
+    <div class="block">
+      <h3>Where it's stuck.</h3>
+      <p>The bit that made you write this brief. Where the next move isn't obvious.</p>
+    </div>
+    <div class="block">
+      <h3>What good looks like in 90 days.</h3>
+      <p>A first run? A locked formulation? A buyer meeting with samples? Pick one.</p>
+    </div>
+    <div class="block">
+      <h3>Constraints worth flagging.</h3>
+      <p>Budget bands, founder time, dietary claims, certifications you must hold, ethical lines.</p>
+    </div>
+    <div class="block">
+      <h3>The room.</h3>
+      <p>Who else is in the decision — co-founders, investors, family. Useful to know who reads the next email.</p>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Reply to hello@hazelkitson.com · Within 48 hours</span>
+    <span class="tag">No problem, darling.</span>
+  </div>
+</div>
+</body></html>

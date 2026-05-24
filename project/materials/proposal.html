@@ -1,0 +1,184 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8">
+<title>Proposal — Hazel Kitson</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  @page { size: A4; margin: 0; }
+  body { margin: 0; background: #c4b9a8; font-family: var(--body); color: var(--ink); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .sheet { width: 210mm; min-height: 297mm; background: var(--bone); margin: 0 auto; padding: 22mm 22mm 18mm; box-sizing: border-box; page-break-after: always; }
+  .sheet:last-child { page-break-after: auto; }
+
+  /* shared */
+  .eyebrow { font-family: var(--structure); font-size: 9pt; letter-spacing: 0.28em; text-transform: uppercase; color: var(--apricot); display:inline-flex; align-items:center; gap:12px; }
+  .eyebrow::before { content:""; width: 32px; height: 1px; background: currentColor; }
+  h1, h2, h3 { font-family: var(--serif); font-weight: 400; color: var(--ink); margin: 0; }
+  h1 em, h2 em, h3 em { font-style: italic; color: var(--apricot); }
+  p { font-size: 10.5pt; line-height: 1.6; color: var(--ink); }
+  .hr { height: 1px; background: var(--ink-faint); margin: 18px 0; }
+
+  /* COVER */
+  .cover { display:flex; flex-direction:column; gap: 22mm; }
+  .cover-top { display:flex; justify-content:space-between; align-items: flex-start; }
+  .brandmark { font-family: var(--serif); font-size: 18pt; }
+  .cover-meta { font-family: var(--structure); font-size: 9pt; letter-spacing: 0.28em; text-transform: uppercase; color: var(--ink-soft); text-align: right; line-height: 1.6; }
+  .cover-mid { display:flex; flex-direction:column; gap: 18px; padding: 16mm 0; }
+  .cover h1 { font-size: 38pt; line-height: 1.04; letter-spacing: -0.015em; max-width: 16ch; }
+  .cover .lede { font-family: var(--serif); font-style: italic; font-size: 14pt; max-width: 36ch; color: var(--ink); }
+  .cover-fact { display:grid; grid-template-columns: repeat(4, 1fr); gap: 18px; padding-top: 14px; border-top: 1px solid var(--ink-faint); }
+  .fact { display:flex; flex-direction:column; gap: 4px; }
+  .fact .lbl { font-family: var(--structure); font-size: 8pt; letter-spacing: 0.28em; text-transform: uppercase; color: var(--apricot); }
+  .fact .v { font-family: var(--serif); font-size: 12pt; color: var(--ink); }
+  .cover-wm { font-family: var(--display); font-size: 60pt; line-height: 0.95; color: var(--ink); transform: rotate(-3deg); transform-origin: 0 center; display:inline-block; align-self: flex-end; margin-right: 4mm; }
+
+  /* CONTENT */
+  .content-head { display:flex; justify-content:space-between; align-items: center; padding-bottom: 12px; border-bottom: 1px solid var(--ink-faint); }
+  .content-head .brandmark { font-size: 13pt; }
+  .content-head .pn { font-family: var(--structure); font-size: 9pt; letter-spacing: 0.26em; text-transform: uppercase; color: var(--ink-soft); }
+  h2.section { font-size: 26pt; line-height: 1.04; letter-spacing: -0.015em; margin: 18px 0 8px; max-width: 18ch; }
+  .lede2 { font-family: var(--serif); font-style: italic; font-size: 12pt; color: var(--ink); opacity: 0.85; max-width: 50ch; margin: 0 0 14px; }
+
+  /* SCOPE / phases */
+  .phase { display:grid; grid-template-columns: 56px 1fr; column-gap: 18px; row-gap: 4px; padding: 14px 0; border-top: 1px solid var(--ink-faint); }
+  .phase:last-child { border-bottom: 1px solid var(--ink-faint); }
+  .phase .pnum { grid-row: span 3; font-family: var(--serif); font-style: italic; font-size: 28pt; line-height: 1; color: var(--apricot); }
+  .phase .ptag { font-family: var(--structure); font-size: 8pt; letter-spacing: 0.3em; text-transform: uppercase; color: var(--apricot); align-self: end; }
+  .phase h3 { font-size: 14pt; line-height: 1.18; }
+  .phase p { margin: 0; font-size: 10pt; color: var(--ink-soft); }
+
+  /* fee table */
+  .fee { width: 100%; border-collapse: collapse; margin-top: 12px; }
+  .fee th, .fee td { padding: 12px 0; text-align: left; font-size: 10pt; border-bottom: 1px solid var(--ink-faint); vertical-align: top; }
+  .fee th { font-family: var(--structure); font-size: 8pt; letter-spacing: 0.28em; text-transform: uppercase; color: var(--apricot); font-weight: 400; }
+  .fee td.amt { text-align: right; font-family: var(--serif); font-size: 12pt; color: var(--ink); white-space: nowrap; }
+  .fee .total td { border-bottom: 0; border-top: 1.5px solid var(--ink); padding-top: 14px; font-family: var(--serif); font-size: 13pt; }
+  .fee .total td.amt { color: var(--apricot); }
+
+  /* terms list */
+  ul.terms { padding: 0; margin: 8px 0 0; list-style: none; }
+  ul.terms li { padding: 10px 0; border-top: 1px solid var(--ink-faint); display:grid; grid-template-columns: 140px 1fr; gap: 18px; font-size: 10pt; }
+  ul.terms li:last-child { border-bottom: 1px solid var(--ink-faint); }
+  ul.terms .k { font-family: var(--structure); font-size: 8pt; letter-spacing: 0.28em; text-transform: uppercase; color: var(--apricot); padding-top: 1px; }
+  ul.terms .v { color: var(--ink); line-height: 1.55; }
+
+  .footer-line { margin-top: 14mm; display:flex; justify-content:space-between; padding-top: 12px; border-top: 1px solid var(--ink-faint); font-family: var(--structure); font-size: 8pt; letter-spacing: 0.28em; text-transform: uppercase; color: var(--ink-soft); }
+  .footer-line .tag { font-family: var(--display); font-size: 13pt; color: var(--apricot); transform: rotate(-3deg); display:inline-block; transform-origin: 0 center; letter-spacing: 0; text-transform: none; }
+
+  @media print { body { background: var(--bone); } .sheet { box-shadow: none; margin: 0; } }
+</style>
+</head><body>
+
+<!-- ========== COVER ========== -->
+<div class="sheet cover">
+  <div class="cover-top">
+    <span class="brandmark">Hazel Kitson</span>
+    <div class="cover-meta">
+      Proposal · 0042<br>
+      For: [Client name]<br>
+      Issued: [Date]
+    </div>
+  </div>
+
+  <div class="cover-mid">
+    <span class="eyebrow">Proposal</span>
+    <h1>A new ready-to-drink, ready for <em>shelf.</em></h1>
+    <p class="lede">A scoped plan — recipe, packaging, production, launch — quoted in stages so each phase costs are clear before it starts.</p>
+  </div>
+
+  <div class="cover-fact">
+    <div class="fact"><span class="lbl">Project</span><span class="v">[Project codename]</span></div>
+    <div class="fact"><span class="lbl">Scope</span><span class="v">Concept → first run</span></div>
+    <div class="fact"><span class="lbl">Timeline</span><span class="v">12 – 16 weeks</span></div>
+    <div class="fact"><span class="lbl">Engagement</span><span class="v">Fixed-fee, in stages</span></div>
+  </div>
+
+  <span class="cover-wm">No problem,<br>darling.</span>
+</div>
+
+<!-- ========== PAGE 2 — SCOPE ========== -->
+<div class="sheet">
+  <div class="content-head">
+    <span class="brandmark">Hazel Kitson</span>
+    <span class="pn">Proposal · 0042 · 02</span>
+  </div>
+
+  <span class="eyebrow" style="margin-top: 14px; display:inline-flex;">The work</span>
+  <h2 class="section">Four phases, <em>plainly named.</em></h2>
+  <p class="lede2">Each phase is quoted as its own line item. Approval at the end of one phase is the trigger to start the next.</p>
+
+  <div class="phase">
+    <span class="pnum">01</span>
+    <span class="ptag">Category &amp; Concept</span>
+    <h3>What's actually moving on shelf.</h3>
+    <p>Category scan across non-alc, wine, spirits, RTD, beer and functional. Gap analysis, positioning frame, three concept routes with rough cost windows.</p>
+  </div>
+  <div class="phase">
+    <span class="pnum">02</span>
+    <span class="ptag">Recipe &amp; Makers</span>
+    <h3>The thing, and who builds it.</h3>
+    <p>Food technologists, ingredient suppliers and contract manufacturers matched to scale. Iteration on the chosen concept to a final, costed formulation.</p>
+  </div>
+  <div class="phase">
+    <span class="pnum">03</span>
+    <span class="ptag">Rules &amp; Packaging</span>
+    <h3>FSANZ, claims, certifications.</h3>
+    <p>Nutrition panels, allergen statements, certifications you need (halal, kosher, organic). Packaging sourced and locked. Artwork to print.</p>
+  </div>
+  <div class="phase">
+    <span class="pnum">04</span>
+    <span class="ptag">Production &amp; Launch</span>
+    <h3>Honest unit economics.</h3>
+    <p>First production scheduled. COGS, MOQs, landed cost reconciled against the formulation. Hand-off to the buyer conversation.</p>
+  </div>
+
+  <div class="footer-line">
+    <span>Hazel Kitson Consulting · ABN 44 804 672 647</span>
+    <span class="tag">No problem, darling.</span>
+  </div>
+</div>
+
+<!-- ========== PAGE 3 — FEES + TERMS ========== -->
+<div class="sheet">
+  <div class="content-head">
+    <span class="brandmark">Hazel Kitson</span>
+    <span class="pn">Proposal · 0042 · 03</span>
+  </div>
+
+  <span class="eyebrow" style="margin-top: 14px; display:inline-flex;">Fees</span>
+  <h2 class="section">Quoted in <em>stages.</em></h2>
+  <p class="lede2">All figures in AUD, exclusive of GST. Phase fees are payable on commencement of each phase. Third-party costs (ingredients, packaging, certifications, courier) are passed through at cost.</p>
+
+  <table class="fee">
+    <thead>
+      <tr><th style="width:46%">Phase</th><th>Deliverable</th><th style="text-align:right">Fee</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>01 · Category &amp; Concept</td><td>Category scan, three concept routes</td><td class="amt">$ 6,500</td></tr>
+      <tr><td>02 · Recipe &amp; Makers</td><td>Final formulation, supplier set</td><td class="amt">$ 12,000</td></tr>
+      <tr><td>03 · Rules &amp; Packaging</td><td>Compliance, packaging, print-ready artwork</td><td class="amt">$ 8,500</td></tr>
+      <tr><td>04 · Production &amp; Launch</td><td>First run scheduled, COGS reconciled</td><td class="amt">$ 9,000</td></tr>
+      <tr class="total"><td colspan="2">Total · fixed fee</td><td class="amt">$ 36,000</td></tr>
+    </tbody>
+  </table>
+
+  <div style="height: 18px"></div>
+  <span class="eyebrow" style="display:inline-flex;">Terms</span>
+  <h2 class="section" style="font-size: 22pt;">The small print, <em>plainly.</em></h2>
+
+  <ul class="terms">
+    <li><span class="k">Validity</span><span class="v">This proposal is valid for thirty days from the issue date.</span></li>
+    <li><span class="k">Invoicing</span><span class="v">Phase fee invoiced on commencement, payable within fourteen days.</span></li>
+    <li><span class="k">Pass-throughs</span><span class="v">Third-party costs invoiced at cost, with copies of supplier invoices attached.</span></li>
+    <li><span class="k">Travel</span><span class="v">Travel beyond Newcastle/Sydney quoted in advance and approved before booking.</span></li>
+    <li><span class="k">IP</span><span class="v">Formulation IP transfers to the client on settlement of the relevant phase.</span></li>
+    <li><span class="k">Pause</span><span class="v">Either party may pause an engagement between phases with seven days' notice.</span></li>
+    <li><span class="k">Reply</span><span class="v">A nod over email is plenty to proceed. Replies within 48 hours.</span></li>
+  </ul>
+
+  <div class="footer-line">
+    <span>hello@hazelkitson.com · Newcastle, AU</span>
+    <span class="tag">No problem, darling.</span>
+  </div>
+</div>
+
+</body></html>

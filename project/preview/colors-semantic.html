@@ -1,0 +1,16 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+.row2 { display:grid; grid-template-columns: 200px 1fr 80px; gap:12px; align-items:center; padding: 12px 0; border-top: 1px solid var(--ink-faint); }
+.swatch { width:100%; height:34px; border:1px solid var(--ink-faint); }
+.use { font-family: var(--body); font-size: 13px; color: var(--ink-soft); }
+.tag { font-family: var(--structure); font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; }
+</style></head>
+<body><div class="card" style="gap:0">
+  <div class="row2"><span class="tag" style="color:var(--ink)">fg-1 / ink</span><div class="swatch" style="background:#2A2A28"></div><span class="use">text</span></div>
+  <div class="row2"><span class="tag" style="color:var(--ink-soft)">fg-2 / ink-soft</span><div class="swatch" style="background:rgba(42,42,40,0.62)"></div><span class="use">secondary</span></div>
+  <div class="row2"><span class="tag" style="color:var(--apricot)">fg-accent</span><div class="swatch" style="background:#EE9F66"></div><span class="use">eyebrows, links</span></div>
+  <div class="row2"><span class="tag" style="color:var(--ink)">bg-page</span><div class="swatch" style="background:#FAF1E6"></div><span class="use">page</span></div>
+  <div class="row2"><span class="tag" style="color:var(--ink)">bg-surface</span><div class="swatch" style="background:#F4E8D6"></div><span class="use">cards</span></div>
+  <div class="row2" style="border-bottom: 1px solid var(--ink-faint)"><span class="tag" style="color:var(--ink)">bg-dark</span><div class="swatch" style="background:#2A2A28"></div><span class="use">client strip, footer</span></div>
+</div></body></html>

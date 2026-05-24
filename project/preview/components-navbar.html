@@ -1,0 +1,27 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+.nav {
+  display:flex; align-items:center; justify-content:space-between;
+  padding: 14px 24px; background: rgba(250,241,230,0.92); backdrop-filter: blur(14px);
+  box-shadow: 0 1px 0 var(--ink-faint); border: 1px solid var(--ink-faint);
+}
+.brand { font-family: var(--serif); font-size: 22px; color: var(--ink); }
+.links { display:flex; gap:28px; align-items:center; }
+.link { font-family: var(--structure); font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink); position:relative; padding: 6px 0; }
+.link.hover { color: var(--apricot); }
+.link.hover::after { content:""; position:absolute; left:0; bottom: -2px; width: 100%; height: 1px; background: var(--apricot); }
+.cta { font-family: var(--structure); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; background: var(--ink); color: var(--bone); padding: 12px 22px; border-radius: 999px; }
+</style></head>
+<body><div class="card" style="background:url('../assets/hero-grapefruit-coral.jpg') center/cover; min-height:auto; padding: 60px 32px;">
+  <nav class="nav">
+    <span class="brand">Hazel Kitson</span>
+    <div class="links">
+      <span class="link">Approach</span>
+      <span class="link hover">Ways in</span>
+      <span class="link">About</span>
+      <span class="cta">Get in touch</span>
+    </div>
+  </nav>
+  <span class="mono-label" style="color:var(--bone); background:var(--ink); padding:6px 10px; align-self:flex-start; margin-top: 16px">Navbar · scrolled state · frosted bone over hero</span>
+</div></body></html>
