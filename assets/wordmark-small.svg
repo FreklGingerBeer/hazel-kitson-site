@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 120" role="img" aria-label="No problem, darling. — small mark">
+  <defs>
+    
+  </defs>
+  <g transform="rotate(-3 110 60)">
+    <text x="10" y="48" class="wm">No problem,</text>
+    <text x="22" y="92" class="wm">darling.</text>
+    <path stroke="#EE9F66" stroke-width="2.4" fill="none" stroke-linecap="round" d="M 28 102 Q 70 108, 110 102 T 180 100"></path>
+  </g>
+</svg>

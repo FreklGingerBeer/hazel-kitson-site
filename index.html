@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hazel Kitson — Food &amp; Beverage NPD Consultancy</title>
+  <meta name="description" content="A food and beverage NPD consultancy based in Newcastle, Australia. Concept, recipe, packaging, production — the bits between an idea and a real shelf.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Permanent+Marker&family=Anton&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    @media (max-width: 640px) {
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(250, 241, 230, 0.97);
+        backdrop-filter: blur(14px);
+        padding: 20px 6vw 28px;
+        gap: 18px;
+        border-top: 1px solid var(--ink-faint);
+        box-shadow: 0 8px 24px rgba(42, 42, 40, 0.1);
+      }
+      .nav-links.open .nav-cta { display: inline-block; margin-top: 4px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar" id="navbar" style="position:fixed">
+    <div class="container navbar-inner">
+      <a href="#" class="nav-brand">Hazel Kitson</a>
+      <div class="nav-links" id="nav-links">
+        <a href="#approach" class="nav-link">Approach</a>
+        <a href="#ways" class="nav-link">Ways in</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-cta">Get in touch</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <section class="hero" aria-labelledby="hero-wordmark">
+    <div class="hero-bg" role="img" aria-label="Grapefruit half on coral background"></div>
+    <div class="hero-top">
+      <span class="eyebrow">A Food &amp; Beverage NPD Consultancy</span>
+      <span class="hero-meta">
+        <span>Newcastle, AU</span>
+        <span>Est. 2026</span>
+      </span>
+    </div>
+    <div class="hero-mid">
+      <h1 class="hero-wordmark" id="hero-wordmark">No problem,<br>darling.</h1>
+      <p class="hero-lede">Concept, recipe, packaging, production — the bits between an idea and the shelf.</p>
+      <p class="hero-explain">A beverage focused FMCG consultancy helping founders navigate from notebook to launch.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Get in touch <span class="arrow">→</span></a>
+        <a href="mailto:hello@hazelkitson.com" class="email-link">hello@hazelkitson.com</a>
+      </div>
+    </div>
+    <div class="hero-bottom">
+      <p class="hero-aside"></p>
+      <span class="hero-scroll"><span class="line"></span> Scroll</span>
+    </div>
+  </section>
+
+  <div class="clients">
+    <div class="clients-inner">
+      <span class="clients-label">Worked with</span>
+      <div class="clients-list">
+        <span class="client-name">Frekl Drinks</span><span class="client-dot">·</span>
+        <span class="client-name">Posca Hydrate</span><span class="client-dot">·</span>
+        <span class="client-name">Sofi Trading</span><span class="client-dot">·</span>
+        <span class="client-name">Smooch</span><span class="client-dot">·</span>
+        <span class="client-name">Kippis</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="what bone" id="approach">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow with-rule">Approach</span>
+        <h2 class="section-heading">The hardest thing is just <em>getting started.</em></h2>
+        <p>Got an idea for a drink stuck in your head with no idea on how to make it a reality?</p>
+      </div>
+      <div class="pillars">
+        <article class="pillar reveal">
+          <span class="pillar-bignum">01</span>
+          <span class="pillar-tag">Category</span>
+          <h3>What's actually moving on shelf.</h3>
+          <p>What's trending, what are the retailers looking for, what's the real opportunity in Australia and for export.</p>
+        </article>
+        <article class="pillar reveal">
+          <span class="pillar-bignum">02</span>
+          <span class="pillar-tag">Makers</span>
+          <h3>Who can produce it.</h3>
+          <p>Food tech, contract manufacture, packaging, ingredients — matched to scale, expertise and to the specific product you want to make.</p>
+        </article>
+        <article class="pillar reveal">
+          <span class="pillar-bignum">03</span>
+          <span class="pillar-tag">Rules</span>
+          <h3>FSANZ, claims, certifications.</h3>
+          <p>The regulatory work that quietly holds a launch together — ensuring your product avoids costly recalls.</p>
+        </article>
+        <article class="pillar reveal">
+          <span class="pillar-bignum">04</span>
+          <span class="pillar-tag">Numbers</span>
+          <h3>Honest unit economics.</h3>
+          <p>COGS, MOQs, landed costs — modelled from pre-product to post-manufacturing. No surprises before you go to market.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="ways" id="ways">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow with-rule">Ways in</span>
+        <h2 class="section-heading">Three ways to <em>start.</em></h2>
+        <p>Designed for founders, by a founder.</p>
+      </div>
+      <div class="ways-grid">
+        <article class="way reveal">
+          <span class="way-num">01</span>
+          <h3>You gotta start somewhere.</h3>
+          <p>A focused half-day diagnostic. What's solid, what are the risks, what to tackle first. Written brief follows within a week with category COGS modelling.</p>
+          <dl class="way-meta">
+            <div><dt>Format</dt><dd>Half-day + written brief</dd></div>
+            <div><dt>Good for</dt><dd>Early-stage concepts, pre-development</dd></div>
+            <div><dt>Turnaround</dt><dd>One week</dd></div>
+          </dl>
+        </article>
+        <article class="way featured reveal">
+          <span class="way-flag">Most signed</span>
+          <span class="way-num">02</span>
+          <h3>It's no problem, really.</h3>
+          <p>A sounding board throughout your product journey, from day one through to production. We're only a phone call away when you really need it. Advisor positions considered upon request.</p>
+          <dl class="way-meta">
+            <div><dt>Format</dt><dd>Weekly retainer</dd></div>
+            <div><dt>Focus</dt><dd>Concept through to production</dd></div>
+            <div><dt>Term</dt><dd>Month-to-month</dd></div>
+          </dl>
+        </article>
+        <article class="way reveal">
+          <span class="way-num">03</span>
+          <h3>We've got this, darling.</h3>
+          <p>End-to-end NPD from category mapping through to production handover. For founders building something that needs to be right, not just ready.</p>
+          <dl class="way-meta">
+            <div><dt>Scope</dt><dd>End-to-end</dd></div>
+            <div><dt>Duration</dt><dd>Three to six months</dd></div>
+            <div><dt>Output</dt><dd>Shelf-ready product + documentation</dd></div>
+          </dl>
+        </article>
+      </div>
+      <p class="ways-footnote">— First conversation's free. Replies within 48 hours.</p>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-side">
+          <span class="about-mark">10+<br>years in<br>drinks.</span>
+          <p class="about-side-line">Newcastle, working across AU, NZ &amp; UK.</p>
+        </div>
+        <div class="about-body reveal">
+          <span class="eyebrow with-rule">About</span>
+          <h2>The founder who's <em>been where you are.</em></h2>
+          <p>Hazel Kitson has spent a decade in FMCG — production, operations &amp; supply chain, innovation and NPD from concept through to launch. Most recently: co-founding and building her own brand Frekl Ginger Beer.</p>
+          <p>Hazel knows what it's like to be a founder with an idea. No Problem, Darling is the consultancy that meets you where you are — no matter your experience or background. No judgement. No drama. Just a real approach from someone who gets it.</p>
+          <div class="about-stats">
+            <div class="about-stat">
+              <strong>10+</strong>
+              <span>Years in drinks</span>
+            </div>
+            <div class="about-stat">
+              <strong>300+</strong>
+              <span>SKUs touched</span>
+            </div>
+            <div class="about-stat">
+              <strong>AU · NZ · UK</strong>
+              <span>Markets</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container-narrow contact-inner reveal">
+      <span class="eyebrow with-rule">Get in touch</span>
+      <h2>Drop a <em>line.</em></h2>
+      <p class="contact-lede">Let's have a chat and see where it goes.</p>
+      <a href="mailto:hello@hazelkitson.com" class="contact-email">hello@hazelkitson.com</a>
+      <div class="contact-meta">
+        <div class="contact-meta-row">
+          <span class="label">Based</span>
+          <span class="value">Newcastle, AU</span>
+        </div>
+        <div class="contact-meta-row">
+          <span class="label">Working with</span>
+          <span class="value">AU · NZ · UK</span>
+        </div>
+        <div class="contact-meta-row">
+          <span class="label">Response</span>
+          <span class="value">Within 48 hours</span>
+        </div>
+        <div class="contact-meta-row">
+          <span class="label">First call</span>
+          <span class="value">On the consultancy</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <span class="footer-brand">Hazel Kitson</span>
+        <span class="footer-tag">No problem, darling.</span>
+        <p class="footer-bio">A food &amp; beverage NPD consultancy based in Newcastle, Australia. Drinks-first. Working across AU, NZ and the UK.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="#approach">Approach</a></li>
+          <li><a href="#ways">Ways in</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Get in touch</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:hello@hazelkitson.com">hello@hazelkitson.com</a></li>
+          <li>Newcastle, NSW, Australia</li>
+          <li>AU · NZ · UK</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Hazel Kitson Consulting</span>
+      <span>Newcastle, AU</span>
+    </div>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    const navToggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+    navToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', isOpen);
+      navToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.setAttribute('aria-label', 'Open menu');
+      });
+    });
+
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  </script>
+
+  <!-- Formatting bar — appears above selected text in edit mode -->
+  <div id="fmt-bar" style="position:absolute;display:none;z-index:10000;background:#2A2A28;border-radius:8px;padding:4px 6px;gap:2px;align-items:center;box-shadow:0 4px 16px rgba(0,0,0,0.35);">
+    <button id="fmt-bold" title="Bold" style="background:none;border:none;color:#FAF1E6;width:32px;height:32px;cursor:pointer;font-weight:700;font-size:15px;border-radius:4px;font-family:serif;">B</button>
+    <button id="fmt-italic" title="Italic" style="background:none;border:none;color:#FAF1E6;width:32px;height:32px;cursor:pointer;font-style:italic;font-size:15px;border-radius:4px;font-family:serif;">I</button>
+    <div style="width:1px;height:20px;background:rgba(250,241,230,0.2);margin:0 2px;"></div>
+    <button id="fmt-clear" title="Remove formatting" style="background:none;border:none;color:rgba(250,241,230,0.6);width:32px;height:32px;cursor:pointer;font-size:12px;border-radius:4px;font-family:sans-serif;">✕</button>
+  </div>
+
+  <!-- Edit toolbar -->
+  <div id="edit-toolbar" style="position:fixed;bottom:28px;right:28px;z-index:9999;display:flex;flex-direction:column;align-items:flex-end;gap:10px;font-family:sans-serif;">
+    <div id="edit-bar" style="display:none;align-items:center;gap:14px;background:#2A2A28;color:#FAF1E6;padding:12px 18px;border-radius:999px;font-size:13px;white-space:nowrap;box-shadow:0 4px 20px rgba(0,0,0,0.25);">
+      <span>Click any text to edit · <strong style="font-weight:600">B</strong> bold · <em>I</em> italic</span>
+      <button id="save-btn" style="background:#EE9F66;color:#FAF1E6;border:none;padding:9px 18px;border-radius:999px;font-size:12px;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;font-weight:600;">Save &amp; download</button>
+    </div>
+    <button id="edit-btn" style="background:#2A2A28;color:#FAF1E6;border:none;padding:13px 22px;border-radius:999px;font-size:12px;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;font-weight:600;box-shadow:0 4px 16px rgba(0,0,0,0.2);">Edit text</button>
+  </div>
+
+  <script>
+    const EDITABLE = [
+      'h1, h2, h3, h4',
+      'p',
+      'dt, dd',
+      'li',
+      'strong',
+      '.client-name, .clients-label',
+      '.nav-brand',
+      '.footer-brand, .footer-bio',
+      '.hero-wordmark',
+      '.contact-email',
+      '.eyebrow',
+      '.pillar-tag',
+      '.way-num, .way-flag',
+      '.about-mark',
+      '.label, .value',
+      '.footer-bottom span',
+      '.ways-footnote',
+      '.about-side-line',
+      '.hero-lede, .hero-explain, .hero-aside',
+      '.contact-lede',
+    ].join(', ');
+
+    const toolbar  = document.getElementById('edit-toolbar');
+    const editBtn  = document.getElementById('edit-btn');
+    const editBar  = document.getElementById('edit-bar');
+    const fmtBar   = document.getElementById('fmt-bar');
+    let editing = false;
+
+    function setEditing(on) {
+      editing = on;
+      document.querySelectorAll(EDITABLE).forEach(el => {
+        if (on) {
+          el.contentEditable = 'true';
+          el.style.outline = '2px dashed rgba(238,159,102,0.45)';
+          el.style.borderRadius = '2px';
+          el.style.minHeight = '1em';
+        } else {
+          el.removeAttribute('contenteditable');
+          el.style.outline = '';
+          el.style.borderRadius = '';
+          el.style.minHeight = '';
+        }
+      });
+      editBar.style.display = on ? 'flex' : 'none';
+      editBtn.textContent = on ? 'Cancel' : 'Edit text';
+      if (!on) fmtBar.style.display = 'none';
+    }
+
+    editBtn.addEventListener('click', () => setEditing(!editing));
+
+    // Formatting bar — appears above selected text
+    document.addEventListener('selectionchange', () => {
+      if (!editing) return;
+      const sel = window.getSelection();
+      if (sel && sel.rangeCount && sel.toString().length > 0) {
+        const rect = sel.getRangeAt(0).getBoundingClientRect();
+        fmtBar.style.display = 'flex';
+        const fmtW = fmtBar.offsetWidth || 120;
+        fmtBar.style.left = Math.max(8, rect.left + window.scrollX + rect.width / 2 - fmtW / 2) + 'px';
+        fmtBar.style.top  = (rect.top + window.scrollY - 48) + 'px';
+      } else {
+        fmtBar.style.display = 'none';
+      }
+    });
+
+    document.getElementById('fmt-bold').addEventListener('mousedown', e => {
+      e.preventDefault();
+      document.execCommand('bold');
+    });
+    document.getElementById('fmt-italic').addEventListener('mousedown', e => {
+      e.preventDefault();
+      document.execCommand('italic');
+    });
+    document.getElementById('fmt-clear').addEventListener('mousedown', e => {
+      e.preventDefault();
+      document.execCommand('removeFormat');
+    });
+
+    document.getElementById('save-btn').addEventListener('click', () => {
+      // Reset everything before capturing
+      setEditing(false);
+      fmtBar.style.display = 'none';
+      toolbar.style.display = 'none';
+
+      const html = '<!doctype html>\n' + document.documentElement.outerHTML;
+
+      // Restore toolbar
+      toolbar.style.display = '';
+
+      const blob = new Blob([html], { type: 'text/html' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'index.html';
+      a.click();
+      URL.revokeObjectURL(a.href);
+    });
+  </script>
+
+</body></html>
