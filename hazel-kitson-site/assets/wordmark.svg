@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 380" role="img" aria-label="No problem, darling.">
+  <defs>
+    
+  </defs>
+  <g transform="rotate(-3 440 190)">
+    <text x="40" y="150" class="wm">No problem,</text>
+    <text x="80" y="290" class="wm">darling.</text>
+    <path stroke="#EE9F66" stroke-width="6" fill="none" stroke-linecap="round" d="M 96 320 Q 220 332, 340 320 T 540 318 Q 595 318, 612 308"></path>
+    <circle cx="500" cy="78" r="4.5" fill="#EE9F66"></circle>
+    <g transform="translate(700 110)" stroke="#EE9F66" stroke-width="4" stroke-linecap="round">
+      <line x1="-14" y1="0" x2="14" y2="0"></line>
+      <line x1="0" y1="-14" x2="0" y2="14"></line>
+      <line x1="-10" y1="-10" x2="10" y2="10"></line>
+      <line x1="-10" y1="10" x2="10" y2="-10"></line>
+    </g>
+  </g>
+</svg>
