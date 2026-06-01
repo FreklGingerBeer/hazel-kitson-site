@@ -62,7 +62,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .section-heading {
   font-family: var(--serif);
   font-weight: 400;
-  font-size: clamp(2.4rem, 5.4vw, 4.2rem);
+  font-size: clamp(1.8rem, 3.6vw, 3rem);
   line-height: 1.04;
   letter-spacing: -0.015em;
   color: var(--ink);
@@ -189,8 +189,8 @@ p { margin: 0; }
   isolation: isolate;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  gap: clamp(24px, 4vh, 48px);
-  padding: 120px 6vw 48px;
+  gap: clamp(16px, 3vh, 36px);
+  padding: 96px 6vw 40px;
   color: var(--ink);
 }
 .hero-bg {
@@ -240,15 +240,15 @@ p { margin: 0; }
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: clamp(24px, 4vh, 40px);
-  max-width: 720px;
-  padding: clamp(20px, 4vh, 60px) 0;
+  gap: clamp(16px, 2.5vh, 28px);
+  max-width: 680px;
+  padding: clamp(8px, 1.5vh, 24px) 0;
 }
 
 /* the editorial wordmark — over-the-top tilted marker, intentionally loud */
 .hero-wordmark {
   font-family: var(--display);
-  font-size: clamp(4rem, 13vw, 12rem);
+  font-size: clamp(2.8rem, 8vw, 7.5rem);
   line-height: 0.94;
   letter-spacing: -0.005em;
   color: var(--ink);
@@ -377,10 +377,10 @@ p { margin: 0; }
    SECTION SHELL
    ============================================================ */
 section {
-  padding: clamp(96px, 14vh, 160px) 0;
+  padding: clamp(56px, 9vh, 112px) 0;
 }
 .section-head {
-  margin-bottom: clamp(48px, 8vh, 80px);
+  margin-bottom: clamp(32px, 5vh, 56px);
 }
 .section-head.center { text-align: center; }
 .section-head.center .section-heading { margin-left: auto; margin-right: auto; }
@@ -675,7 +675,7 @@ section {
    ============================================================ */
 .contact {
   background: var(--bone);
-  padding: clamp(96px, 14vh, 160px) 0;
+  padding: clamp(56px, 9vh, 112px) 0;
 }
 .contact-inner {
   max-width: 880px;
@@ -834,8 +834,8 @@ section {
    RESPONSIVE
    ============================================================ */
 @media (max-width: 980px) {
-  .hero { padding: 110px 6vw 40px; }
-  .hero-wordmark { font-size: clamp(3.4rem, 14vw, 7rem); }
+  .hero { padding: 84px 6vw 32px; }
+  .hero-wordmark { font-size: clamp(2.4rem, 10vw, 5rem); }
   .pillars { grid-template-columns: 1fr; gap: 40px; }
   .ways-grid { grid-template-columns: 1fr; }
   .way.featured { transform: none; }
