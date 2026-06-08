@@ -196,9 +196,9 @@ p { margin: 0; }
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url("assets/hero-grapefruit-coral.jpg");
+  background-image: url("assets/hero-grapefruit-whole.jpg");
   background-size: cover;
-  background-position: 50% 62%;
+  background-position: 55% 40%;
   background-repeat: no-repeat;
   z-index: 0;
   /* compensate for the JPG's soft compression — adds bite without clipping skin tones */
